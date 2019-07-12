@@ -93,7 +93,7 @@ class Home extends Component {
                 </Header>
                 <div id='medium_box'>
                     <Card
-                        title="Input Code"
+                        title="Replace Candidates"
                         extra={[
                         //清除缓存
                         <Button key="3" onClick={this.props.clearCode}>Clear</Button>,
@@ -125,14 +125,14 @@ class Home extends Component {
                             //把右侧代码框中的代码返回回去，并且得到一个list，让list展示到右侧代码框
                             //analyze返回的是string类型的代码，并且得到新的object类型的代码，与codeArea关联
                             //返回的是editCode内的内容，接收的内容显示在codeArea中
-                            <Button key="3" onClick={()=>{this.props.analyzeCode(this.props.editCode,this.props.edit)}}>Analyze</Button>,
+                            <Button key="3" onClick={()=>{this.props.analyzeCode(this.props.editCode,this.props.edit)}}>Example</Button>,
                             //不返回数据
                             //接收的object类型的代码，与codeArea关联，同时具有responseCode
-                            <Button key="2" onClick={this.props.replaceAll}>ReplaceAll</Button>,
+                            <Button key="2" onClick={this.props.replaceAll}>Analyze</Button>,
                             //不返回数据
                             //接收的object类型的代码，与codeArea关联，同时具有responseCode
-                            //{this.props.edit===true?<Button key="1" onClick={this.props.revertCode}>Revert</Button>:<Button disabled key="0">Revert</Button>},
-                            <Button key="1" onClick={this.props.revertCode}>Revert</Button>
+                            //{this.props.edit===true?<Button key="1" onClick={this.props.revertCode}>ReplaceAll</Button>:<Button disabled key="0">ReplaceAll</Button>},
+                            <Button key="1" onClick={this.props.revertCode}>ReplaceAll</Button>
                         ]}
                         id='right_card'
                     >
